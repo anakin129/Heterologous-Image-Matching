@@ -3,26 +3,24 @@
 This is the course design of *Pattern Recognition and Machine Learning* in Huazhong University of Science and Technology, School of Artificial Intelligence and Automation
 
 ## Introduction
-[TranST](https://github.com/chenxin-dlut/TransT) presents an attention-based feature fusion network,which effectively combines the template and search region features using attention. It has achieved excellent results in SOT and its architecture is very simple.Therefore,We conduct our research job based on it.
-
-According to the characteristics of heterogeneous image matching tasks, we propose a pseudo-Siamese network that is shared by the bottom layer and shared by the high layer.We conducted experiments with three different backbones which adopt the technology of multi-feature map fusion.Besides,We have modified the original attention module according to the characteristics of image matching.
+[TransT](https://github.com/chenxin-dlut/TransT) presents an attention-based network to achieve precise and robust detection and tracking by fusing template and search features. Inspired by TransT, we propose a pseudo-Siamese network that is independent at the lower level and shared at the higher level based on the characteristics of heterogeneous image-matching tasks. In the experiment, we discuss different backbones as well as different strategies of feature extraction for template and search images. Besides, we simplify the attention module in TransT according to the characteristics of image matching.
 
 ## Quick Start
 
 ### Train
-To run a model,please run
+To run a model, run
 ```
 python run_train.py
 ```
 
 ### Evaluation
-To get the test metrics,please run
+To get the test metrics, run
 ```
 python run_test.py
 ```
 
 ### Demo
-To see a demo,please run
+To see a demo, run
 ```
 python demo.py
 ```

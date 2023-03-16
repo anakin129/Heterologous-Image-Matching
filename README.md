@@ -32,7 +32,7 @@ M3FD is a paired visible and infrared images dataset which contains 6 kinds of t
 
 ### Backbone Processing Strategy
 
-The following is the results of applying different backbone processing strategies to TranST on the M3FD test set.
+The following is the results of applying different backbone processing strategies to TransT on the M3FD test set.
 
 |<sub>Backbone processing strategy</sub> | <sub>single backbone</sub> | <sub>low-sep-high-sharing double backbones</sub> | <sub>independent double backbones</sub>|
 | :-: | :-: | :-: | :-: |
@@ -88,9 +88,9 @@ We apply the above model to the **COCO** dataset without fine-tuning.
   <img src="img/1.png" width="700px" />
 </div>
 
-The following is the results of applying TranST's and Ours attention module on the M3FD test set.
+The following is the results of applying TransT's and ours attention module on the M3FD test set.
 
-|<sub>Attention Module</sub> | <sub>TranST(x4)</sub> | <sub>Ours(x5)</sub> |
+|<sub>Attention Module</sub> | <sub>TransT(x4)</sub> | <sub>Ours(x5)</sub> |
 | :-: | :-: | :-: |
 | <sub> Model parameters </sub> | <sub>23.2M </sub> | <sub>**19.8M**</sub> |
 | <sub> FLOPs </sub> | <sub> **25.49G**</sub> | <sub> **25.49G**</sub> | 

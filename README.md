@@ -27,11 +27,10 @@ python demo.py
 
 
 ## Experiment result
-### Dataset :M3FD(https://github.com/JinyuanLiu-CV/TarDAL)
-M3FD is a paired visible and infrared images dataset which containing 6 kinds of targets: {People, Car, Bus, Motorcycle, Lamp, Truck}.
-You can also get the preprocessed M3FD dataset which is divided into training set and test set by contacting me via email **1466847018@qq.com**
-You can also get the model weights files for experiments below by contacting me.
-### Why we choose a pseudo-Siamese network that is shared by the bottom layer and shared by the high layer?
+### Dataset: [M3FD](https://github.com/JinyuanLiu-CV/TarDAL)
+M3FD is a paired visible and infrared images dataset which contains 6 kinds of targets: {People, Car, Bus, Motorcycle, Lamp, Truck}.
+
+### Backbone Processing Strategy
 
 The following is the results of applying different backbone processing strategies to TranST on the M3FD test set.
 
@@ -45,7 +44,7 @@ The following is the results of applying different backbone processing strategie
 
 (P0.5,P0.7 represents the ratio of IOU above 0.5,0.7 respectively)
 
-### Comparison of different backbone networks
+###Different Backbones
 The following is the results of applying the low-sep-high-sharing backbone processing strategies to model whose backbone is different from TranSt on the M3FD test set.
 
 |<sub>Backbone Network</sub> | <sub>ResNet50</sub> | <sub>MobileNetv3</sub> | <sub>CSPNet</sub>|
@@ -56,7 +55,7 @@ The following is the results of applying the low-sep-high-sharing backbone proce
 | <sub> P0.5 </sub> | <sub>95.10%</sub> | <sub>**96.66%**</sub>  | <sub>91.78%</sub> |
 | <sub> P0.7 </sub> | <sub>**88.79%**</sub> | <sub>88.63%</sub>  | <sub>84.09%</sub> |
 
-Appling the technology of multi-feature map fusion to above backbone.
+Appling the technology of multi-scale feature map fusion to above backbone.
 
 |<sub>Backbone Network</sub> | <sub>ResNet50(multi)</sub> | <sub>MobileNetv3(multi)</sub> | <sub>CSPNet(multi)</sub>|
 | :-: | :-: | :-: | :-: |
@@ -100,20 +99,6 @@ The following is the results of applying TranST's and Ours attention module on t
 | <sub> P0.7 </sub> | <sub>96.61%</sub> | <sub>**97.75%**</sub>|
 
 (x4,x5 represents the number of layers stacked)
-
-Visualizing the feature map of the attention module (take the first 16 channels)
-
-**TranST**
-
-<div align="center">
-  <img src="img/3.png" width="500px" />
-</div>
-
-**Ours**
-
-<div align="center">
-  <img src="img/2.png" width="450px" />
-</div>
 
 
 ## Reference
